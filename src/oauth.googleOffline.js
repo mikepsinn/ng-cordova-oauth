@@ -17,7 +17,7 @@
      * @param    object options
      * @return   promise
      */
-    function oauthGoogleOffline(clientId, clientSecret, appScope, options) {
+    function oauthGoogleOffline(clientId, appScope, options) {
       var deferred = $q.defer();
       if(window.cordova) {
         var cordovaMetadata = cordova.require("cordova/plugin_list").metadata;
@@ -36,21 +36,12 @@
                 deferred.reject("Problem authenticating");
                 return;
               }
-              code = code[1];
-
-              $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
-              $http({method: "post", url: "https://accounts.google.com/o/oauth2/token", data: "client_id=" + clientId + "&client_secret=" + clientSecret + "&redirect_uri=" + redirect_uri + "&grant_type=authorization_code&code=" + code }).then(function(result) {
-                deferred.resolve(result.data);
-
-                setTimeout(function() {
-                  browserRef.close();
-                }, 10);
-              }, function(data, status) {
-                deferred.reject("Problem authenticating");
-
-                setTimeout(function() {
-                  browserRef.close();
-                }, 10);
+              var authorizationCode = code[1];
+              console.log("Google authorization code is " + authorizationCode);
+              deferred.resolve(authorizationCode);
+              browserRef.close();
+              browserRef.addEventListener('exit', function(event) {
+                deferred.reject("The sign in flow was canceled");
               });
             }
           });
