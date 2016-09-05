@@ -50,7 +50,7 @@
 
   function cordovaOauth(
     $q, $http, $cordovaOauthUtility, $ngCordovaAzureAD, $ngCordovaAdfs, $ngCordovaDropbox, $ngCordovaDigitalOcean,
-    $ngCordovaGoogle, $ngCordovaGithub, $ngCordovaFacebook, $ngCordovaLinkedin, $ngCordovaInstagram, $ngCordovaBox, $ngCordovaReddit, $ngCordovaSlack,
+    $ngCordovaGoogle, $ngCordovaGoogleOffline, $ngCordovaGithub, $ngCordovaFacebook, $ngCordovaLinkedin, $ngCordovaInstagram, $ngCordovaBox, $ngCordovaReddit, $ngCordovaSlack,
     $ngCordovaTwitter, $ngCordovaMeetup, $ngCordovaSalesforce, $ngCordovaStrava, $ngCordovaWithings, $ngCordovaFoursquare, $ngCordovaMagento,
     $ngCordovaVkontakte, $ngCordovaOdnoklassniki, $ngCordovaImgur, $ngCordovaSpotify, $ngCordovaUber, $ngCordovaWindowslive, $ngCordovaYammer,
     $ngCordovaVenmo, $ngCordovaStripe, $ngCordovaRally, $ngCordovaFamilySearch, $ngCordovaEnvato, $ngCordovaWeibo, $ngCordovaJawbone, $ngCordovaUntappd,
@@ -63,6 +63,7 @@
       dropbox: $ngCordovaDropbox.signin,
       digitalOcean: $ngCordovaDigitalOcean.signin,
       google: $ngCordovaGoogle.signin,
+      googleOffline: $ngCordovaGoogleOffline.signin,
       github: $ngCordovaGithub.signin,
       facebook: $ngCordovaFacebook.signin,
       linkedin: $ngCordovaLinkedin.signin,
@@ -110,6 +111,7 @@
     '$ngCordovaDropbox',
     '$ngCordovaDigitalOcean',
     '$ngCordovaGoogle',
+    '$ngCordovaGoogleOffline',
     '$ngCordovaGithub',
     '$ngCordovaFacebook',
     '$ngCordovaLinkedin',
