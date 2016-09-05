@@ -16,13 +16,13 @@
      * @param    object options
      * @return   promise
      */
-    function oauthFitbit(clientId, redirect_uri, appScope, options) {
+    function oauthFitbit(clientId, appScope, options) {
       var deferred = $q.defer();
       if(window.cordova) {
         if($cordovaOauthUtility.isInAppBrowserInstalled()) {
-          if(!redirect_uri){
-            var redirect_uri = "http://localhost/callback";
-          }
+
+          var redirect_uri = "http://localhost/callback";
+
           if(options !== undefined) {
             if(options.hasOwnProperty("redirect_uri")) {
               redirect_uri = options.redirect_uri;
