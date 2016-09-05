@@ -33,6 +33,7 @@
           browserRef.addEventListener('loadstart', function(event) {
             if((event.url).indexOf(redirect_uri) === 0) {
               var authorizationCode = (event.url).split("code=")[1];
+              authorizationCode = authorizationCode.replace("#_=_", "");
               console.log("Fitbit authorization code is " + authorizationCode);
               deferred.resolve(authorizationCode);
               browserRef.close();
