@@ -46,7 +46,10 @@
     'oauth.netatmo',
     'oauth.trakttv',
     'oauth.yahoo',
-    'oauth.fitbit'])
+    'oauth.fitbit',
+    'oauth.rescuetime',
+    'oauth.slice'
+  ])
     .factory("$cordovaOauth", cordovaOauth);
 
   function cordovaOauth(
@@ -56,7 +59,7 @@
     $ngCordovaVkontakte, $ngCordovaOdnoklassniki, $ngCordovaImgur, $ngCordovaSpotify, $ngCordovaUber, $ngCordovaWindowslive, $ngCordovaYammer,
     $ngCordovaVenmo, $ngCordovaStripe, $ngCordovaRally, $ngCordovaFamilySearch, $ngCordovaEnvato, $ngCordovaWeibo, $ngCordovaJawbone, $ngCordovaUntappd,
     $ngCordovaDribble, $ngCordovaPocket, $ngCordovaMercadolibre, $ngCordovaXing, $ngCordovaNetatmo, $ngCordovaTraktTv, $ngCordovaYahoo,
-    $ngCordovaFitbit) {
+    $ngCordovaFitbit, $ngCordovaRescuetime, $ngCordovaSlice) {
 
     return {
       azureAD: $ngCordovaAzureAD.signin,
@@ -101,7 +104,9 @@
       netatmo: $ngCordovaNetatmo.signin,
       trakttv: $ngCordovaTraktTv.signin,
       yahoo: $ngCordovaYahoo.signin,
-      fitbit: $ngCordovaFitbit.signin
+      fitbit: $ngCordovaFitbit.signin,
+      rescuetime: $ngCordovaRescuetime.signin,
+      slice: $ngCordovaSlice.signin
     };
   }
 
@@ -149,6 +154,8 @@
     '$ngCordovaNetatmo',
     '$ngCordovaTraktTv',
     '$ngCordovaYahoo',
-    '$ngCordovaFitbit'
+    '$ngCordovaFitbit',
+    '$ngCordovaRescuetime',
+    '$ngCordovaSlice'
   ];
 })();
