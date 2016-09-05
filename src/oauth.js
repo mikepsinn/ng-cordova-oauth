@@ -9,6 +9,7 @@
     'oauth.dropbox',
     'oauth.digitalOcean',
     'oauth.google',
+    'oauth.googleOffline',
     'oauth.github',
     'oauth.facebook',
     'oauth.linkedin',
