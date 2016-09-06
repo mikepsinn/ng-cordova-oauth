@@ -48,7 +48,8 @@
     'oauth.yahoo',
     'oauth.fitbit',
     'oauth.rescuetime',
-    'oauth.slice'
+    'oauth.slice',
+    'oauth.runkeeper'
   ])
     .factory("$cordovaOauth", cordovaOauth);
 
@@ -59,7 +60,7 @@
     $ngCordovaVkontakte, $ngCordovaOdnoklassniki, $ngCordovaImgur, $ngCordovaSpotify, $ngCordovaUber, $ngCordovaWindowslive, $ngCordovaYammer,
     $ngCordovaVenmo, $ngCordovaStripe, $ngCordovaRally, $ngCordovaFamilySearch, $ngCordovaEnvato, $ngCordovaWeibo, $ngCordovaJawbone, $ngCordovaUntappd,
     $ngCordovaDribble, $ngCordovaPocket, $ngCordovaMercadolibre, $ngCordovaXing, $ngCordovaNetatmo, $ngCordovaTraktTv, $ngCordovaYahoo,
-    $ngCordovaFitbit, $ngCordovaRescuetime, $ngCordovaSlice) {
+    $ngCordovaFitbit, $ngCordovaRescuetime, $ngCordovaSlice, $ngCordovaRunkeeper) {
 
     return {
       azureAD: $ngCordovaAzureAD.signin,
@@ -106,7 +107,8 @@
       yahoo: $ngCordovaYahoo.signin,
       fitbit: $ngCordovaFitbit.signin,
       rescuetime: $ngCordovaRescuetime.signin,
-      slice: $ngCordovaSlice.signin
+      slice: $ngCordovaSlice.signin,
+      runkeeper: $ngCordovaRunkeeper.signin
     };
   }
 
@@ -156,6 +158,7 @@
     '$ngCordovaYahoo',
     '$ngCordovaFitbit',
     '$ngCordovaRescuetime',
-    '$ngCordovaSlice'
+    '$ngCordovaSlice',
+    '$ngCordovaRunkeeper'
   ];
 })();
