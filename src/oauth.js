@@ -60,7 +60,7 @@
     $ngCordovaVkontakte, $ngCordovaOdnoklassniki, $ngCordovaImgur, $ngCordovaSpotify, $ngCordovaUber, $ngCordovaWindowslive, $ngCordovaYammer,
     $ngCordovaVenmo, $ngCordovaStripe, $ngCordovaRally, $ngCordovaFamilySearch, $ngCordovaEnvato, $ngCordovaWeibo, $ngCordovaJawbone, $ngCordovaUntappd,
     $ngCordovaDribble, $ngCordovaPocket, $ngCordovaMercadolibre, $ngCordovaXing, $ngCordovaNetatmo, $ngCordovaTraktTv, $ngCordovaYahoo,
-    $ngCordovaFitbit, $ngCordovaRescuetime, $ngCordovaSlice, $ngCordovaRunkeeper) {
+    $ngCordovaFitbit, $ngCordovaRescuetime, $ngCordovaSlice, $ngCordovaRunkeeper, $ngCordovaQuantiModo) {
 
     return {
       azureAD: $ngCordovaAzureAD.signin,
@@ -108,7 +108,8 @@
       fitbit: $ngCordovaFitbit.signin,
       rescuetime: $ngCordovaRescuetime.signin,
       slice: $ngCordovaSlice.signin,
-      runkeeper: $ngCordovaRunkeeper.signin
+      runkeeper: $ngCordovaRunkeeper.signin,
+      quantimodo: $ngCordovaQuantiModo.signin
     };
   }
 
@@ -159,6 +160,7 @@
     '$ngCordovaFitbit',
     '$ngCordovaRescuetime',
     '$ngCordovaSlice',
-    '$ngCordovaRunkeeper'
+    '$ngCordovaRunkeeper',
+    '$ngCordovaQuantiModo'
   ];
 })();

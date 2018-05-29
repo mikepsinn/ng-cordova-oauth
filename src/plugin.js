@@ -56,6 +56,7 @@
  *    Untappd
  *    Xing
  *    Trakt.tv
+ *    QuantiModo
  */
 
 angular.module("ngCordovaOauth", [
